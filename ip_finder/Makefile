@@ -13,3 +13,4 @@ run: $(TARGET)
 
 clean:
 	rm -rf $(TARGET) *.o
+	rm -rf bin
