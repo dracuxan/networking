@@ -12,5 +12,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: test and clean
+      - name: test ip finder and clean
         run: cd ./ip_finder; make; make clean
