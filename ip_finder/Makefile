@@ -1,15 +1,15 @@
 TARGET := main
+SRC := main.c helper.c
+OBJ := $(SRC:.c=.o)
 
-$(TARGET): $(TARGET).o
-	gcc $(TARGET).o -o $(TARGET)
+$(TARGET): $(OBJ)
+	gcc $(OBJ) -o $(TARGET)
 
-$(TARGET).o: $(TARGET).c
-	gcc -c $(TARGET).c -o $(TARGET).o
+%.o: %.c
+	gcc -c $< -o $@
 
-run:
+run: $(TARGET)
 	@./$(TARGET)
 
 clean:
-	rm -rf bin
-	rm -rf $(TARGET) 
-	rm -rf *.o
+	rm -rf $(TARGET) *.o
