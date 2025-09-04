@@ -1,4 +1,4 @@
-name: Test implementations
+name: Does it build?
 
 on:
   push:
