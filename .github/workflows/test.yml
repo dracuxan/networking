@@ -12,7 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: test ip finder and clean
         run: cd ./ip_finder; make; make clean
+
       - name: test basic server and clean
         run: cd ./basic_server; make; make clean
