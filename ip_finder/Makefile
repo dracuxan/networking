@@ -1,8 +1,9 @@
-TARGET := main
+TARGET := bin/main
 SRC := main.c
 OBJ := $(SRC:.c=.o)
 
 $(TARGET): $(OBJ)
+	mkdir -p bin
 	gcc $(OBJ) -o $(TARGET)
 
 %.o: %.c

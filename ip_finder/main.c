@@ -7,7 +7,7 @@
 
 int main() {
   struct ifaddrs *addrs;
-  if (getifaddrs(&addrs) == -1) {
+  if (getifaddrs(&addrs) == 1) {
     printf("getifaddrs() failed!\n");
   }
 

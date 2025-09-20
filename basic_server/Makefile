@@ -1,8 +1,9 @@
-TARGET := sock_init.exe
+TARGET := bin/sock_init
 SRC := sock_init.c
 OBJ := $(SRC:.c=.o)
 
 $(TARGET): $(OBJ)
+	mkdir -p bin
 	gcc $(OBJ) -o $(TARGET)
 
 %.o: %.c
@@ -12,5 +13,5 @@ run: $(TARGET)
 	./$(TARGET)
 
 clean:
-	rm -rf *.exe *.o
+	rm -rf *.o
 	rm -rf bin
