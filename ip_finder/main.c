@@ -1,4 +1,3 @@
-#include "helper.h"
 #include <ifaddrs.h>
 #include <netdb.h>
 #include <stdbool.h>
@@ -7,8 +6,6 @@
 #include <sys/socket.h>
 
 int main() {
-  hello("Nisarg");
-
   struct ifaddrs *addrs;
   if (getifaddrs(&addrs) == -1) {
     printf("getifaddrs() failed!\n");
